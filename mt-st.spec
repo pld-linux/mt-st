@@ -9,7 +9,7 @@ Summary(tr):	Manyetik teyp sürücüsünün işlevsel kontrolü (mt)
 Summary(uk):	ğÒÏÇÒÁÍÉ ÕĞÒÁ×Ì¦ÎÎÑ ÒÏÂÏÔÏÀ ÎÁËÏĞÉŞÕ×ÁŞ¦× ÎÁ ÍÁÇÎ¦ÔÎ¦Ê ÓÔÒ¦ŞÃ¦ (mt)
 Name:		mt-st
 Version:	0.7
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
@@ -22,9 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_sbindir	/sbin
 
 %description
-The mt-st package contains the mt and st tape drive management
-programs. Mt (for magnetic tape drives) and st (for SCSI tape devices)
-can control rewinding, ejecting, skipping files and blocks and more.
+The mt-st package contains tape drive management
+programs, which can control rewinding, ejecting, skipping files and blocks and more.
 
 %description -l de
 Das mt-st-Paket enthält die mt und st Streamer-Management-Programme.
@@ -42,9 +41,8 @@ les bandes, comme le rembobinage, l'éjection, le saut de fichiers et
 de blocs, etc.
 
 %description -l pl
-Pakiet mt-st zawiera programy mt i st s³u¿±ce do kontroli napêdów
-ta¶mowych. Mt (generalnie do napêdów ta¶mowych) i st (do napêdów
-ta¶mowych SCSI) umo¿liwiaj± przewijanie, przesuwanie ta¶my i
+Pakiet mt-st zawiera programy s³u¿±ce do kontroli napêdów
+ta¶mowych i umo¿liwiaj±ce przewijanie, przesuwanie ta¶my i
 wyjmowanie z napêdu kaset z tasm±.
 
 %description -l pt_BR
