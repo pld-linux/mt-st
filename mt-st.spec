@@ -5,7 +5,7 @@ Summary(pl):	Program do kontroli napêdów ta¶mowych
 Summary(tr):	Manyetik teyp sürücüsünün iþlevsel kontrolü (mt)
 Name:		mt-st
 Version:	0.6
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications/System
 Group(de):	Applikationen/System
