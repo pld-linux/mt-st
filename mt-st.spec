@@ -41,12 +41,12 @@ birçok iþlemin gerçekleþtirilmesinde kullanýlabilir.
 %patch -p1
 
 %build
-make CFLAGS="$RPM_OPT_FLAGS -Wall"
+%{__make} CFLAGS="$RPM_OPT_FLAGS -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/{bin,sbin,%{_mandir}/man{1,8}}
-make install
+%{__make} install
 
 gzip -9nf README README.stinit mt-st-0.5b.lsm stinit.def.examples \
 	$RPM_BUILD_ROOT%{_mandir}/man{1,8}/*
