@@ -5,12 +5,13 @@ Summary(pl):	Program do kontroli napêdów ta¶mowych
 Summary(tr):	Manyetik teyp sürücüsünün iþlevsel kontrolü (mt)
 Name:		mt-st
 Version:	0.6
-Release:	2
+Release:	3
 License:	BSD
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
+Source1:	%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-errno.h.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -57,6 +58,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT/%{_mandir}
+
 gzip -9nf README README.stinit mt-st-*.lsm
 
 %clean
@@ -69,4 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/mt
 %attr(755,root,root) %{_sbindir}/stinit
 %{_mandir}/man1/mt.1*
+%lang(es) %{_mandir}/es/man1/mt.1*
+%lang(ja) %{_mandir}/ja/man1/mt.1*
+%lang(pl) %{_mandir}/pl/man1/mt.1*
 %{_mandir}/man8/stinit.8*
