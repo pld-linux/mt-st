@@ -4,16 +4,15 @@ Summary(fr):	Contrôle les opérations du lecteur de bandes magnétiques (mt)
 Summary(pl):	Program do kontroli napêdów ta¶mowych
 Summary(tr):	Manyetik teyp sürücüsünün iþlevsel kontrolü (mt)
 Name:		mt-st
-Version:	0.5b
-Release:	11
+Version:	0.6
+Release:	1
 License:	BSD
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
-Patch0:		%{name}-buildroot.patch
-Patch1:		%{name}-datcomp.patch
-Patch2:		%{name}-jbj.patch
+Patch0:		%{name}-DESTDIR.patch
+Patch1:		%{name}-errno.h.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		/bin
@@ -48,24 +47,25 @@ birçok iþlemin gerçekleþtirilmesinde kullanýlabilir.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 %{__make} CFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g} -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{bin,sbin,%{_mandir}/man{1,8}}
-%{__make} install
 
-gzip -9nf README README.stinit mt-st-0.5b.lsm stinit.def.examples
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+gzip -9nf README README.stinit mt-st-*.lsm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,README.stinit,mt-st-0.5b.lsm,stinit.def.examples}.gz
+%doc *.gz
+%config(noreplace) %{_sysconfdir}/stinit.def
 %attr(755,root,root) %{_bindir}/mt
 %attr(755,root,root) %{_sbindir}/stinit
 %{_mandir}/man1/mt.1*
