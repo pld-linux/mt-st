@@ -49,7 +49,7 @@ birçok iþlemin gerçekleþtirilmesinde kullanýlabilir.
 %patch1 -p1
 
 %build
-%{__make} CFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -Wall"
+%{__make} CFLAGS="%{rpmcflags} -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
