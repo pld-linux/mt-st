@@ -14,7 +14,7 @@ License:	BSD
 Group:		Applications/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
 # Source0-md5:	3e1cb5a09dc73c6e54089e2056f9ff55
-Source1:	%{name}-non-english-man-pages.tar.bz2
+Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	c2a75e15c360e4c8b2ef350cd6c2c45e
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-errno.h.patch
