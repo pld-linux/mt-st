@@ -1,0 +1,34 @@
+diff -Nru mt-st-0.6/Makefile mt-st-0.6.new/Makefile
+--- mt-st-0.6/Makefile	Mon Dec  4 20:43:24 2000
++++ mt-st-0.6.new/Makefile	Mon Dec  4 20:45:59 2000
+@@ -1,7 +1,8 @@
+ CFLAGS=  -Wall -O2
+-SBINDIR= /sbin
+-BINDIR=  /bin
+-MANDIR= /usr/man
++sbindir= /sbin
++bindir=  /bin
++mandir= /usr/share/man
++sysconfdir= /etc
+ 
+ all:	mt stinit
+ 
+@@ -12,10 +13,14 @@
+ 	$(CC) $(CFLAGS) -o stinit stinit.c
+ 
+ install: mt stinit
+-	install -s mt $(BINDIR)
+-	install -c -m 444 mt.1 $(MANDIR)/man1
+-	install -s stinit $(SBINDIR)
+-	install -c -m 444 stinit.8 $(MANDIR)/man8
++	install -d $(DESTDIR)$(bindir) $(DESTDIR)$(sbindir) \
++		$(DESTDIR)$(mandir)/man1 $(DESTDIR)$(mandir)/man8 \
++		$(DESTDIR)$(sysconfdir)
++	install mt $(DESTDIR)$(bindir)
++	install -c -m 444 mt.1 $(DESTDIR)$(mandir)/man1
++	install stinit $(DESTDIR)$(sbindir)
++	install -c -m 444 stinit.8 $(DESTDIR)$(mandir)/man8
++	install stinit.def.examples $(DESTDIR)$(sysconfdir)/stinit.def
+ 
+ dist:	clean
+ 	(mydir=`basename \`pwd\``;\
