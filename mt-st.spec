@@ -1,8 +1,12 @@
 Summary:	Programs to control tape device operations
 Summary(de):	Programme zum Kontrollieren von Streamern
+Summary(es):	Controla la operaciСn de drivers de cinta magnИtica (mt)
 Summary(fr):	ContrТle les opИrations du lecteur de bandes magnИtiques (mt)
 Summary(pl):	Program do kontroli napЙdСw ta╤mowych
+Summary(pt_BR):	Controla a operaГЦo de drivers de fita magnИtica (mt)
+Summary(ru):	Программы управления работой накопителей на магнитной ленте (mt)
 Summary(tr):	Manyetik teyp sЭrЭcЭsЭnЭn iЧlevsel kontrolЭ (mt)
+Summary(uk):	Програми управл╕ння роботою накопичувач╕в на магн╕тн╕й стр╕чц╕ (mt)
 Name:		mt-st
 Version:	0.7
 Release:	1
@@ -27,6 +31,11 @@ Das mt-st-Paket enthДlt die mt und st Streamer-Management-Programme.
 mt (fЭr Magnetbandlaufwerke) und st (fЭr SCSI-Streamer) kЖnnen
 RЭckspulen, auswerfen, Dateien und blocks auslassen, und mehr.
 
+%description -l es
+El programa mt puede ser usado para desarrollar varias operaciones
+en cintas, incluyendo retroceder, expulsar, saltar archivos y
+bloques, etc.
+
 %description -l fr
 Le programme mt peut servir Ю rИaliser de nombreuses opИrations sur
 les bandes, comme le rembobinage, l'Иjection, le saut de fichiers et
@@ -38,9 +47,24 @@ ta╤mowych. Mt (generalnie do napЙdСw ta╤mowych) i st (do napЙdСw
 ta╤mowych SCSI) umo©liwiaj╠ przewijanie, przesuwanie ta╤my i
 wyjmowanie z napЙdu kaset z tasm╠.
 
+%description -l pt_BR
+O programa mt pode ser usado para desenvolver vАrias operaГУes em
+fitas, incluindo retroceder, ejetar, pular arquivos e blocos, etc.
+
+%description -l ru
+Пакет mt-st содержит программы управления лентами mt и st.
+Они могут управлять перемоткой, выталкиванием ленты,
+пропуском файлов и блоков и т.п.
+
 %description -l tr
 mt programЩ teypler Эzerinde rewind, eject, dosya, blok atlamasЩ gibi
 birГok iЧlemin gerГekleЧtirilmesinde kullanЩlabilir.
+
+%description -l uk
+Пакет mt-st м╕стить програми управл╕ння стр╕чками mt та st.
+Вони можуть управляти перемоткою, виштовхуванням стр╕чки,
+пропуском файл╕в та блок╕в та ╕нше.
+
 
 %prep
 %setup -q
