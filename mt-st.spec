@@ -82,14 +82,12 @@ rm -rf $RPM_BUILD_ROOT
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT/%{_mandir}
 
-gzip -9nf README README.stinit mt-st-*.lsm
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README README.stinit mt-st-*.lsm
 %config(noreplace) %{_sysconfdir}/stinit.def
 %attr(755,root,root) %{_bindir}/mt
 %attr(755,root,root) %{_sbindir}/stinit
