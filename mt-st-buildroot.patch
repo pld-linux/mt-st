@@ -17,7 +17,7 @@
 -MANDIR= /usr/man
 +SBINDIR= $(RPM_BUILD_ROOT)/sbin
 +BINDIR=  $(RPM_BUILD_ROOT)/bin
-+MANDIR=  $(RPM_BUILD_ROOT)/usr/man
++MANDIR=  $(RPM_BUILD_ROOT)/usr/share/man
  
  all:	mt stinit
  
