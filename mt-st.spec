@@ -45,7 +45,7 @@ de blocs, etc.
 %description -l pl
 Pakiet mt-st zawiera programy s³u¿±ce do kontroli napêdów
 ta¶mowych i umo¿liwiaj±ce przewijanie, przesuwanie ta¶my i
-wyjmowanie z napêdu kaset z tasm±.
+wyjmowanie z napêdu kaset z ta¶m±.
 
 %description -l pt_BR
 O programa mt pode ser usado para desenvolver várias operações em
