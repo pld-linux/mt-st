@@ -1,0 +1,10 @@
+--- mt-st-0.5b/stinit.c.orig	Sat Aug 15 05:18:13 1998
++++ mt-st-0.5b/stinit.c	Wed Feb 10 16:30:03 1999
+@@ -8,6 +8,7 @@
+    Last modified: Sat Aug 15 12:18:13 1998 by makisara@home
+ */
+ 
++#include <errno.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
