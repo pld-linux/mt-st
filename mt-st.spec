@@ -9,7 +9,7 @@ Summary(tr):	Manyetik teyp sЭrЭcЭsЭnЭn iЧlevsel kontrolЭ (mt)
 Summary(uk):	Програми управл╕ння роботою накопичувач╕в на магн╕тн╕й стр╕чц╕ (mt)
 Name:		mt-st
 Version:	0.7
-Release:	2
+Release:	3
 License:	BSD
 Group:		Applications/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
