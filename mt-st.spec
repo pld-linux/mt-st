@@ -1,6 +1,7 @@
-Summary:	Programs to control tape device operations.
-Summary(de):	Steuerung des magnetischen Bandlaufwerks (mt) 
+Summary:	Programs to control tape device operations
+Summary(de):	Programme zum Kontrollieren von Streamern
 Summary(fr):	Contrôle les opérations du lecteur de bandes magnétiques (mt)
+Summary(pl):	Program do kontroli napêdów ta¶mowych
 Summary(tr):	Manyetik teyp sürücüsünün iþlevsel kontrolü (mt)
 Name:		mt-st
 Version:	0.5b
@@ -10,8 +11,8 @@ Group:		Utilities/System
 Group(pl):	Narzêdzia/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
 Patch0:		%{name}-buildroot.patch
-Patch1:		mt-st-datcomp.patch
-Patch2:		mt-st-jbj.patch
+Patch1:		%{name}-datcomp.patch
+Patch2:		%{name}-jbj.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		/bin
@@ -22,17 +23,21 @@ The mt-st package contains the mt and st tape drive management
 programs. Mt (for magnetic tape drives) and st (for SCSI tape devices)
 can control rewinding, ejecting, skipping files and blocks and more.
 
-This package can help you manage tape drives.
-
 %description -l de
-Das mt-Programm kann zur Erledigung von vielen Vorgängen auf Bändern
-benutzt werden, etwa Rückspulen, Auswerfen, Überspringen von Dateien
-und Blöcken usw.
+Das mt-st-Paket enthält die mt und st Streamer-Management-Programme.
+mt (für Magnetbandlaufwerke) und st (für SCSI-Streamer) können
+Rückspulen, auswerfen, Dateien und blocks auslassen, und mehr.
 
 %description -l fr
 Le programme mt peut servir à réaliser de nombreuses opérations sur
 les bandes, comme le rembobinage, l'éjection, le saut de fichiers et
 de blocs, etc.
+
+%description -l pl
+Pakiet mt-st zawiera programy mt i st s³u¿±ce do kontroli napêdów
+ta¶mowych. Mt (generalnie do napêdów ta¶mowych) i st (do napêdów
+ta¶mowych SCSI) umo¿liwiaj± przewijanie, przesuwanie ta¶my i
+wyjmowanie z napêdu kaset z tasm±.
 
 %description -l tr
 mt programý teypler üzerinde rewind, eject, dosya, blok atlamasý gibi
