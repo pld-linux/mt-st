@@ -4,8 +4,8 @@ Summary(fr):	Contrôle les opérations du lecteur de bandes magnétiques (mt)
 Summary(pl):	Program do kontroli napêdów ta¶mowych
 Summary(tr):	Manyetik teyp sürücüsünün iþlevsel kontrolü (mt)
 Name:		mt-st
-Version:	0.6
-Release:	3
+Version:	0.7
+Release:	1
 License:	BSD
 Group:		Applications/System
 Group(de):	Applikationen/System
@@ -50,7 +50,7 @@ birçok iþlemin gerçekleþtirilmesinde kullanýlabilir.
 %patch1 -p1
 
 %build
-%{__make} CFLAGS="%{rpmcflags} -Wall"
+%{__make} CFLAGS="%{rpmcflags} -Wall" CC=%{__cc}
 
 %install
 rm -rf $RPM_BUILD_ROOT
