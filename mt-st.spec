@@ -8,8 +8,6 @@ Version:	0.7
 Release:	1
 License:	BSD
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
 Source1:	%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-DESTDIR.patch
