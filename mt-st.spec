@@ -4,12 +4,14 @@ Summary(fr):	Contrôle les opérations du lecteur de bandes magnétiques (mt)
 Summary(tr):	Manyetik teyp sürücüsünün iþlevsel kontrolü (mt)
 Name:		mt-st
 Version:	0.5b
-Release:	4
+Release:	10
 License:	BSD
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
-Patch0:		mt-st-buildroot.patch
+Patch0:		%{name}-buildroot.patch
+Patch1:		mt-st-datcomp.patch
+Patch2:		mt-st-jbj.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		/bin
@@ -38,7 +40,9 @@ birçok iþlemin gerçekleþtirilmesinde kullanýlabilir.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 %{__make} CFLAGS="$RPM_OPT_FLAGS -Wall"
