@@ -5,10 +5,11 @@ Summary(pl):	Program do kontroli napêdów ta¶mowych
 Summary(tr):	Manyetik teyp sürücüsünün iþlevsel kontrolü (mt)
 Name:		mt-st
 Version:	0.5b
-Release:	10
+Release:	11
 License:	BSD
-Group:		Utilities/System
-Group(pl):	Narzêdzia/System
+Group:		Applications/System
+Group(de):	Applikationen/System
+Group(pl):	Aplikacje/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
 Patch0:		%{name}-buildroot.patch
 Patch1:		%{name}-datcomp.patch
@@ -50,15 +51,14 @@ birçok iþlemin gerçekleþtirilmesinde kullanýlabilir.
 %patch2 -p1
 
 %build
-%{__make} CFLAGS="$RPM_OPT_FLAGS -Wall"
+%{__make} CFLAGS="{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g} -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/{bin,sbin,%{_mandir}/man{1,8}}
 %{__make} install
 
-gzip -9nf README README.stinit mt-st-0.5b.lsm stinit.def.examples \
-	$RPM_BUILD_ROOT%{_mandir}/man{1,8}/*
+gzip -9nf README README.stinit mt-st-0.5b.lsm stinit.def.examples
 
 %clean
 rm -rf $RPM_BUILD_ROOT
