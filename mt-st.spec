@@ -9,7 +9,7 @@ Copyright:	BSD
 Group:		Applications/System
 Source:		ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
 Patch:		mt-st-buildroot.patch
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		/bin
 %define		_sbindir	/sbin
