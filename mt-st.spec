@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_sbindir	/sbin
 
 %description
-The mt-st package contains tape drive management
-programs, which can control rewinding, ejecting, skipping files and blocks and more.
+The mt-st package contains tape drive management programs, which can
+control rewinding, ejecting, skipping files and blocks and more.
 
 %description -l de
 Das mt-st-Paket enthДlt die mt und st Streamer-Management-Programme.
@@ -33,9 +33,9 @@ mt (fЭr Magnetbandlaufwerke) und st (fЭr SCSI-Streamer) kЖnnen
 RЭckspulen, auswerfen, Dateien und blocks auslassen, und mehr.
 
 %description -l es
-El programa mt puede ser usado para desarrollar varias operaciones
-en cintas, incluyendo retroceder, expulsar, saltar archivos y
-bloques, etc.
+El programa mt puede ser usado para desarrollar varias operaciones en
+cintas, incluyendo retroceder, expulsar, saltar archivos y bloques,
+etc.
 
 %description -l fr
 Le programme mt peut servir Ю rИaliser de nombreuses opИrations sur
@@ -43,27 +43,27 @@ les bandes, comme le rembobinage, l'Иjection, le saut de fichiers et
 de blocs, etc.
 
 %description -l pl
-Pakiet mt-st zawiera programy sЁu©╠ce do kontroli napЙdСw
-ta╤mowych i umo©liwiaj╠ce przewijanie, przesuwanie ta╤my i
-wyjmowanie z napЙdu kaset z ta╤m╠.
+Pakiet mt-st zawiera programy sЁu©╠ce do kontroli napЙdСw ta╤mowych i
+umo©liwiaj╠ce przewijanie, przesuwanie ta╤my i wyjmowanie z napЙdu
+kaset z ta╤m╠.
 
 %description -l pt_BR
 O programa mt pode ser usado para desenvolver vАrias operaГУes em
 fitas, incluindo retroceder, ejetar, pular arquivos e blocos, etc.
 
 %description -l ru
-Пакет mt-st содержит программы управления лентами mt и st.
-Они могут управлять перемоткой, выталкиванием ленты,
-пропуском файлов и блоков и т.п.
+Пакет mt-st содержит программы управления лентами mt и st. Они могут
+управлять перемоткой, выталкиванием ленты, пропуском файлов и блоков и
+т.п.
 
 %description -l tr
 mt programЩ teypler Эzerinde rewind, eject, dosya, blok atlamasЩ gibi
 birГok iЧlemin gerГekleЧtirilmesinde kullanЩlabilir.
 
 %description -l uk
-Пакет mt-st м╕стить програми управл╕ння стр╕чками mt та st.
-Вони можуть управляти перемоткою, виштовхуванням стр╕чки,
-пропуском файл╕в та блок╕в та ╕нше.
+Пакет mt-st м╕стить програми управл╕ння стр╕чками mt та st. Вони
+можуть управляти перемоткою, виштовхуванням стр╕чки, пропуском файл╕в
+та блок╕в та ╕нше.
 
 
 %prep
