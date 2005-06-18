@@ -8,12 +8,12 @@ Summary(ru):	Программы управления работой накопителей на магнитной ленте (mt)
 Summary(tr):	Manyetik teyp sЭrЭcЭsЭnЭn iЧlevsel kontrolЭ (mt)
 Summary(uk):	Програми управл╕ння роботою накопичувач╕в на магн╕тн╕й стр╕чц╕ (mt)
 Name:		mt-st
-Version:	0.8
+Version:	0.9
 Release:	1
 License:	BSD
 Group:		Applications/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
-# Source0-md5:	bddcad0290630e4521b4d72cbc75d9dd
+# Source0-md5:	186011e64b791bd3cdb10ef433e1245d
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	c2a75e15c360e4c8b2ef350cd6c2c45e
 Patch0:		%{name}-DESTDIR.patch
