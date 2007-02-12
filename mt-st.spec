@@ -1,12 +1,12 @@
 Summary:	Programs to control tape device operations
-Summary(de):	Programme zum Kontrollieren von Streamern
-Summary(es):	Controla la operaciСn de drivers de cinta magnИtica (mt)
-Summary(fr):	ContrТle les opИrations du lecteur de bandes magnИtiques (mt)
-Summary(pl):	Program do kontroli napЙdСw ta╤mowych
-Summary(pt_BR):	Controla a operaГЦo de drivers de fita magnИtica (mt)
-Summary(ru):	Программы управления работой накопителей на магнитной ленте (mt)
-Summary(tr):	Manyetik teyp sЭrЭcЭsЭnЭn iЧlevsel kontrolЭ (mt)
-Summary(uk):	Програми управл╕ння роботою накопичувач╕в на магн╕тн╕й стр╕чц╕ (mt)
+Summary(de.UTF-8):   Programme zum Kontrollieren von Streamern
+Summary(es.UTF-8):   Controla la operaciцЁn de drivers de cinta magnц╘tica (mt)
+Summary(fr.UTF-8):   Contrц╢le les opц╘rations du lecteur de bandes magnц╘tiques (mt)
+Summary(pl.UTF-8):   Program do kontroli napд≥dцЁw taе⌡mowych
+Summary(pt_BR.UTF-8):   Controla a operaц╖цёo de drivers de fita magnц╘tica (mt)
+Summary(ru.UTF-8):   п÷я─п╬пЁя─п╟п╪п╪я▀ я┐п©я─п╟п╡п╩п╣п╫п╦я▐ я─п╟п╠п╬я┌п╬п╧ п╫п╟п╨п╬п©п╦я┌п╣п╩п╣п╧ п╫п╟ п╪п╟пЁп╫п╦я┌п╫п╬п╧ п╩п╣п╫я┌п╣ (mt)
+Summary(tr.UTF-8):   Manyetik teyp sц╪rц╪cц╪sц╪nц╪n iе÷levsel kontrolц╪ (mt)
+Summary(uk.UTF-8):   п÷я─п╬пЁя─п╟п╪п╦ я┐п©я─п╟п╡п╩я√п╫п╫я▐ я─п╬п╠п╬я┌п╬я▌ п╫п╟п╨п╬п©п╦я┤я┐п╡п╟я┤я√п╡ п╫п╟ п╪п╟пЁп╫я√я┌п╫я√п╧ я│я┌я─я√я┤я├я√ (mt)
 Name:		mt-st
 Version:	0.9b
 Release:	1
@@ -27,43 +27,43 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The mt-st package contains tape drive management programs, which can
 control rewinding, ejecting, skipping files and blocks and more.
 
-%description -l de
-Das mt-st-Paket enthДlt die mt und st Streamer-Management-Programme.
-mt (fЭr Magnetbandlaufwerke) und st (fЭr SCSI-Streamer) kЖnnen
-RЭckspulen, auswerfen, Dateien und blocks auslassen, und mehr.
+%description -l de.UTF-8
+Das mt-st-Paket enthц╓lt die mt und st Streamer-Management-Programme.
+mt (fц╪r Magnetbandlaufwerke) und st (fц╪r SCSI-Streamer) kц╤nnen
+Rц╪ckspulen, auswerfen, Dateien und blocks auslassen, und mehr.
 
-%description -l es
+%description -l es.UTF-8
 El programa mt puede ser usado para desarrollar varias operaciones en
 cintas, incluyendo retroceder, expulsar, saltar archivos y bloques,
 etc.
 
-%description -l fr
-Le programme mt peut servir Ю rИaliser de nombreuses opИrations sur
-les bandes, comme le rembobinage, l'Иjection, le saut de fichiers et
+%description -l fr.UTF-8
+Le programme mt peut servir ц═ rц╘aliser de nombreuses opц╘rations sur
+les bandes, comme le rembobinage, l'ц╘jection, le saut de fichiers et
 de blocs, etc.
 
-%description -l pl
-Pakiet mt-st zawiera programy sЁu©╠ce do kontroli napЙdСw ta╤mowych i
-umo©liwiaj╠ce przewijanie, przesuwanie ta╤my i wyjmowanie z napЙdu
-kaset z ta╤m╠.
+%description -l pl.UTF-8
+Pakiet mt-st zawiera programy sе┌uе╪д┘ce do kontroli napд≥dцЁw taе⌡mowych i
+umoе╪liwiajд┘ce przewijanie, przesuwanie taе⌡my i wyjmowanie z napд≥du
+kaset z taе⌡mд┘.
 
-%description -l pt_BR
-O programa mt pode ser usado para desenvolver vАrias operaГУes em
+%description -l pt_BR.UTF-8
+O programa mt pode ser usado para desenvolver vц║rias operaц╖ц╣es em
 fitas, incluindo retroceder, ejetar, pular arquivos e blocos, etc.
 
-%description -l ru
-Пакет mt-st содержит программы управления лентами mt и st. Они могут
-управлять перемоткой, выталкиванием ленты, пропуском файлов и блоков и
-т.п.
+%description -l ru.UTF-8
+п÷п╟п╨п╣я┌ mt-st я│п╬п╢п╣я─п╤п╦я┌ п©я─п╬пЁя─п╟п╪п╪я▀ я┐п©я─п╟п╡п╩п╣п╫п╦я▐ п╩п╣п╫я┌п╟п╪п╦ mt п╦ st. п·п╫п╦ п╪п╬пЁя┐я┌
+я┐п©я─п╟п╡п╩я▐я┌я▄ п©п╣я─п╣п╪п╬я┌п╨п╬п╧, п╡я▀я┌п╟п╩п╨п╦п╡п╟п╫п╦п╣п╪ п╩п╣п╫я┌я▀, п©я─п╬п©я┐я│п╨п╬п╪ я└п╟п╧п╩п╬п╡ п╦ п╠п╩п╬п╨п╬п╡ п╦
+я┌.п©.
 
-%description -l tr
-mt programЩ teypler Эzerinde rewind, eject, dosya, blok atlamasЩ gibi
-birГok iЧlemin gerГekleЧtirilmesinde kullanЩlabilir.
+%description -l tr.UTF-8
+mt programд╠ teypler ц╪zerinde rewind, eject, dosya, blok atlamasд╠ gibi
+birц╖ok iе÷lemin gerц╖ekleе÷tirilmesinde kullanд╠labilir.
 
-%description -l uk
-Пакет mt-st м╕стить програми управл╕ння стр╕чками mt та st. Вони
-можуть управляти перемоткою, виштовхуванням стр╕чки, пропуском файл╕в
-та блок╕в та ╕нше.
+%description -l uk.UTF-8
+п÷п╟п╨п╣я┌ mt-st п╪я√я│я┌п╦я┌я▄ п©я─п╬пЁя─п╟п╪п╦ я┐п©я─п╟п╡п╩я√п╫п╫я▐ я│я┌я─я√я┤п╨п╟п╪п╦ mt я┌п╟ st. п▓п╬п╫п╦
+п╪п╬п╤я┐я┌я▄ я┐п©я─п╟п╡п╩я▐я┌п╦ п©п╣я─п╣п╪п╬я┌п╨п╬я▌, п╡п╦я┬я┌п╬п╡я┘я┐п╡п╟п╫п╫я▐п╪ я│я┌я─я√я┤п╨п╦, п©я─п╬п©я┐я│п╨п╬п╪ я└п╟п╧п╩я√п╡
+я┌п╟ п╠п╩п╬п╨я√п╡ я┌п╟ я√п╫я┬п╣.
 
 
 %prep
