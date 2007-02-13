@@ -1,12 +1,12 @@
 Summary:	Programs to control tape device operations
-Summary(de.UTF-8):   Programme zum Kontrollieren von Streamern
-Summary(es.UTF-8):   Controla la operación de drivers de cinta magnética (mt)
-Summary(fr.UTF-8):   Contrôle les opérations du lecteur de bandes magnétiques (mt)
-Summary(pl.UTF-8):   Program do kontroli napędów taśmowych
-Summary(pt_BR.UTF-8):   Controla a operação de drivers de fita magnética (mt)
-Summary(ru.UTF-8):   Программы управления работой накопителей на магнитной ленте (mt)
-Summary(tr.UTF-8):   Manyetik teyp sürücüsünün işlevsel kontrolü (mt)
-Summary(uk.UTF-8):   Програми управління роботою накопичувачів на магнітній стрічці (mt)
+Summary(de.UTF-8):	Programme zum Kontrollieren von Streamern
+Summary(es.UTF-8):	Controla la operación de drivers de cinta magnética (mt)
+Summary(fr.UTF-8):	Contrôle les opérations du lecteur de bandes magnétiques (mt)
+Summary(pl.UTF-8):	Program do kontroli napędów taśmowych
+Summary(pt_BR.UTF-8):	Controla a operação de drivers de fita magnética (mt)
+Summary(ru.UTF-8):	Программы управления работой накопителей на магнитной ленте (mt)
+Summary(tr.UTF-8):	Manyetik teyp sürücüsünün işlevsel kontrolü (mt)
+Summary(uk.UTF-8):	Програми управління роботою накопичувачів на магнітній стрічці (mt)
 Name:		mt-st
 Version:	0.9b
 Release:	1
