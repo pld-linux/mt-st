@@ -18,6 +18,7 @@ Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-ma
 # Source1-md5:	c2a75e15c360e4c8b2ef350cd6c2c45e
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-errno.h.patch
+Patch2:		%{name}-remove-unused-code.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		/bin
@@ -70,6 +71,7 @@ birçok işlemin gerçekleştirilmesinde kullanılabilir.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__make} \
