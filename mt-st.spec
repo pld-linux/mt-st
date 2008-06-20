@@ -8,12 +8,12 @@ Summary(ru.UTF-8):	Программы управления работой нак
 Summary(tr.UTF-8):	Manyetik teyp sürücüsünün işlevsel kontrolü (mt)
 Summary(uk.UTF-8):	Програми управління роботою накопичувачів на магнітній стрічці (mt)
 Name:		mt-st
-Version:	0.9b
+Version:	1.1
 Release:	1
 License:	BSD
 Group:		Applications/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
-# Source0-md5:	c80e992a8d16def7af7421549b26ce77
+# Source0-md5:	fdd5f5ec673c9f630a102ceff7612774
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	c2a75e15c360e4c8b2ef350cd6c2c45e
 Patch0:		%{name}-DESTDIR.patch
@@ -71,7 +71,8 @@ birçok işlemin gerçekleştirilmesinde kullanılabilir.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
+# seems obsolete
+#%patch2 -p1
 
 %build
 %{__make} \
