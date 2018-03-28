@@ -9,7 +9,7 @@ Summary(tr.UTF-8):	Manyetik teyp sürücüsünün işlevsel kontrolü (mt)
 Summary(uk.UTF-8):	Програми управління роботою накопичувачів на магнітній стрічці (mt)
 Name:		mt-st
 Version:	1.1
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
