@@ -1,31 +1,30 @@
---- mt-st-0.8/Makefile~	2004-04-24 16:34:33.000000000 +0200
-+++ mt-st-0.8/Makefile	2004-04-24 16:38:14.000000000 +0200
-@@ -2,6 +2,7 @@
- SBINDIR= /sbin
- BINDIR=  /bin
- MANDIR= /usr/share/man
-+SYSCONFDIR= /etc
+--- mt-st-1.3/Makefile.orig	2020-08-25 16:45:29.915116419 +0200
++++ mt-st-1.3/Makefile	2020-08-25 16:58:01.857709463 +0200
+@@ -5,6 +5,7 @@
+ BINDIR=  $(DESTDIR)$(EXEC_PREFIX)/bin
+ DATAROOTDIR= $(DESTDIR)/$(PREFIX)/share
+ MANDIR= $(DATAROOTDIR)/man
++SYSCONFDIR= $(DESTDIR)/etc
+ DEFTAPE?= /dev/tape
  
- all:	mt stinit
+ PROGS=mt stinit
+@@ -36,15 +37,16 @@
+ 	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -DDEFTAPE='"$(DEFTAPE)"' -o $@ $<
  
-@@ -12,14 +13,12 @@
- 	$(CC) $(CFLAGS) -o stinit stinit.c
- 
- install: mt stinit
--	install -s mt $(MTDIR)
--	install -c -m 444 mt.1 $(MANDIR)/man1
--	(if [ -f $(MANDIR)/man1/mt.1.gz ] ; then \
--	  rm -f $(MANDIR)/man1/mt.1.gz; gzip $(MANDIR)/man1/mt.1; fi)
+ install: $(PROGS)
+-	install -d $(BINDIR)  $(SBINDIR) $(MANDIR) $(MANDIR)/man1 $(MANDIR)/man8
+-	install -s mt $(BINDIR)
++	install -d $(BINDIR)  $(SBINDIR) $(MANDIR) $(MANDIR)/man1 $(MANDIR)/man8 $(SYSCONFDIR)
++	install mt $(BINDIR)
+ 	install -m 444 mt.1 $(MANDIR)/man1
+ 	(if [ -f $(MANDIR)/man1/mt.1.gz ] ; then \
+ 	  rm -f $(MANDIR)/man1/mt.1.gz; gzip $(MANDIR)/man1/mt.1; fi)
 -	install -s stinit $(SBINDIR)
--	install -c -m 444 stinit.8 $(MANDIR)/man8
--	(if [ -f $(MANDIR)/man8/stinit.8.gz ] ; then \
--	  rm -f $(MANDIR)/man8/stinit.8.gz; gzip $(MANDIR)/man8/stinit.8; fi)
-+	install -d $(DESTDIR)$(BINDIR) $(DESTDIR)$(MANDIR)/man1 $(DESTDIR)$(MANDIR)/man8 $(DESTDIR)$(SBINDIR) $(DESTDIR)$(SYSCONFDIR)
-+	install -s mt $(DESTDIR)$(BINDIR)
-+	install -c -m 444 mt.1 $(DESTDIR)$(MANDIR)/man1
-+	install -s stinit $(DESTDIR)$(SBINDIR)
-+	install -c -m 444 stinit.8 $(DESTDIR)$(MANDIR)/man8
-+	install stinit.def.examples $(DESTDIR)$(SYSCONFDIR)/stinit.def
++	install stinit $(SBINDIR)
+ 	install -m 444 stinit.8 $(MANDIR)/man8
+ 	(if [ -f $(MANDIR)/man8/stinit.8.gz ] ; then \
+ 	  rm -f $(MANDIR)/man8/stinit.8.gz; gzip $(MANDIR)/man8/stinit.8; fi)
++	install -m 644 stinit.def.examples $(SYSCONFDIR)/stinit.def
  
- dist:	clean
- 	(mydir=`basename \`pwd\``;\
+ dist:
+ 	rm -f "$(TARFILE)" && \

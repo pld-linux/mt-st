@@ -8,17 +8,19 @@ Summary(ru.UTF-8):	Программы управления работой нак
 Summary(tr.UTF-8):	Manyetik teyp sürücüsünün işlevsel kontrolü (mt)
 Summary(uk.UTF-8):	Програми управління роботою накопичувачів на магнітній стрічці (mt)
 Name:		mt-st
-Version:	1.1
-Release:	2
-License:	BSD
+Version:	1.3
+Release:	1
+License:	GPL v2
 Group:		Applications/System
-Source0:	ftp://metalab.unc.edu/pub/Linux/system/backup/%{name}-%{version}.tar.gz
-# Source0-md5:	fdd5f5ec673c9f630a102ceff7612774
+#Source0Download: https://github.com/iustin/mt-st/releases
+Source0:	https://github.com/iustin/mt-st/releases/download/%{name}-%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	3b1455b194d7048436046d47d1e7362d
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	c2a75e15c360e4c8b2ef350cd6c2c45e
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-errno.h.patch
 Patch2:		%{name}-remove-unused-code.patch
+URL:		https://github.com/iustin/mt-st
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		/bin
@@ -71,8 +73,7 @@ birçok işlemin gerçekleştirilmesinde kullanılabilir.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-# seems obsolete
-#%patch2 -p1
+%patch2 -p1
 
 %build
 %{__make} \
@@ -92,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README README.stinit mt-st-*.lsm
+%doc CHANGELOG.md README.md
 %config(noreplace) %{_sysconfdir}/stinit.def
 %attr(755,root,root) %{_bindir}/mt
 %attr(755,root,root) %{_sbindir}/stinit
